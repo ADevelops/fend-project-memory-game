@@ -104,8 +104,8 @@ i.fa-repeat{
  */
 
 .deck {
-    width: 600px;
-    min-height: 600px;
+    width: 500px;
+    min-height: 500px;
     background: linear-gradient(165deg, #42a6ff 0%, #9568d8 85%);
     padding: 32px;
     border-radius: 10px;
@@ -118,8 +118,8 @@ i.fa-repeat{
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    height: 105px;
+    width: 105px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
