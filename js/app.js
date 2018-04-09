@@ -145,3 +145,47 @@ function clickCard() {
 };
 // Call function
 clickCard();
+
+
+//Modal code from https://www.w3schools.com/howto/howto_css_modals.asp
+// Get the modal
+let modal = document.getElementsByClassName('modal')[0];
+
+// Get the element that closes the modal
+let close = document.getElementsByClassName("close")[0];
+
+// When the user clicks close element on the modal
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Modal function
+function generateModal() {
+
+let timer   = document.querySelector(".timer");
+let endTime = timer.innerHTML;
+
+    // Display modal
+    modal.style.display = "block"; 
+
+    // Display in the modal the total amount of moves
+    document.querySelector(".totalMoves").innerHTML = moves;
+
+    // Display in the modal the total time taken
+    document.querySelector(".totalTime").innerHTML = endTime;
+
+    // Display in the modal the end star rating gold/silver/bronze
+    document.querySelector(".starRating").innerHTML = starRating;
+
+    // Replay button in the modal footer
+    $(".btn").click(function() {
+      location.reload()
+    });
+  };

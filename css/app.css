@@ -164,3 +164,80 @@ i.fa-repeat{
 .deck .card.noMatch {
   background: #ff5050;
 }
+
+
+/*
+ *Styles for the modal
+ */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 0 150px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.10); /* Black w/ opacity */
+}
+
+.modal-header {
+    width: 100%;
+    background-color: #42a6ff;
+    color: white;
+}
+
+.header-text {
+    width: 100%;
+    padding: 14px 0 5px;
+    text-align: center;
+}
+
+.modal-body p {
+    font-size: 1.2em;
+    line-height: 40px;
+    margin: 9px 0 9px;
+}
+
+.modal-footer {
+    font-stretch: 1.1em;
+    padding: 2px 16px;
+    background-color: #9568d8;
+    color: white;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.close {
+    color: #f8f8ff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
