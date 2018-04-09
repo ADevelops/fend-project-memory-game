@@ -178,7 +178,7 @@ i.fa-repeat{
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    padding: 0 150px;
+    padding: 0 10%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.10); /* Black w/ opacity */
