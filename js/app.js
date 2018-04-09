@@ -188,4 +188,14 @@ let endTime = timer.innerHTML;
     $(".btn").click(function() {
       location.reload()
     });
-  };
+};
+
+
+// Function to restart the game on icon click
+function restartGame() {
+  $(".restart").click(function() {
+    location.reload()
+  });
+}
+//Call function
+restartGame();
