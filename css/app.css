@@ -112,9 +112,9 @@ i.fa-repeat{
  */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    width: 600px;
+    min-height: 600px;
+    background: linear-gradient(165deg, #42a6ff 0%, #9568d8 85%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -149,8 +149,18 @@ i.fa-repeat{
     font-size: 33px;
 }
 
+.deck .card.disable {
+    pointer-events: none;
+    opacity: 0.9;
+}
+
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
+    background: #12fd73;
     font-size: 33px;
+    box-shadow: 12px 12px 12px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.noMatch {
+  background: #ff5050;
 }

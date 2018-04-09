@@ -67,13 +67,81 @@ function startTimer(){
 };
 
 
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
+// Card click event
+function clickCard() {
+
+  $(".card").click(function() {
+
+    // Open/show card and disable its click event
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+    this.classList.toggle("disable");
+    openCards.push($(this));
+
+    // Check there is two elements in the openCards array
+    if (openCards.length === 2) {
+
+      // Increment moves
+      moves += 1;
+      document.querySelector(".moves").innerHTML = moves;
+
+        // Start timer
+        if (moves === 1){
+          startTimer();
+        }
+
+        //  Stop timer and call modal if all cards have been matched
+        setTimeout(function() {
+          if (matchedCards == 8) {
+              clearInterval(interval);
+              generateModal();
+          }
+        }, 600);
+
+      // Compare two open cards
+      if(openCards[0].children().attr('class') === openCards[1].children().attr('class')) {
+        // If cards match
+        openCards[0].addClass('match');
+        openCards[1].addClass('match');
+
+        // Store matched cards count
+        matchedCards += 1;
+
+        //Remove cards from openCards array
+        openCards = [];
+
+      } else {
+        // If cards don't match
+        setTimeout(function() {
+          openCards[0].addClass('noMatch');
+          openCards[1].addClass('noMatch');
+        }, 500);
+
+        // Reset non matching cards
+        setTimeout(function() {
+          $(".card").removeClass("open");
+          $(".card").removeClass("show");
+          $(".card").removeClass("disable");
+          $(".card").removeClass("noMatch");
+
+          //Remove cards from openCards array
+          openCards = [];
+        }, 1400)
+
+        // Disable card click temporarily while comparing cards that don't match
+        $(".card").addClass("disable");
+      }
+    }
+    // Star rating
+    starRating = "Gold";
+    if (moves == 16) {
+      document.getElementsByClassName("fa-star")[2].remove();
+      starRating = "Silver";
+    } else if (moves == 24) {
+      document.getElementsByClassName("fa-star")[1].remove();
+      starRating = "Bronze";
+    }
+  })
+};
+// Call function
+clickCard();
