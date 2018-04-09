@@ -20,22 +20,34 @@ let shuffledCards = [...shuffle(cards)],
     interval,
     second = 1, 
     minute = 0;
-    
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
+// Known as the Fisher-Yates (aka Knuth) Shuffle
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
+  let currentIndex = array.length, temporaryValue, randomIndex;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...S
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
 }
+
+
+// Create HTMl list items
+function newGame() {
+  shuffledCards.forEach(function(card) {
+    $(".deck").append('<li class="card"><i class=" fa ' + card + '"></i></li>');
+  })
+}
+// Call newGame function
+newGame();
 
 
 /*
