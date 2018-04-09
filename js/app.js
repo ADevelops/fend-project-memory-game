@@ -2,6 +2,26 @@
  * UDACITY MEMORY GAME PROJECT 2018
  */
 
+const cards = ["fa-diamond", "fa-diamond", 
+              "fa-paper-plane-o", "fa-paper-plane-o", 
+              "fa-anchor", "fa-anchor", 
+              "fa-bolt", "fa-bolt", 
+              "fa-cube", "fa-cube", 
+              "fa-leaf", "fa-leaf", 
+              "fa-bicycle", "fa-bicycle", 
+              "fa-bomb", "fa-bomb"];
+
+ 
+let shuffledCards = [...shuffle(cards)],
+    openCards = [],
+    matchedCards = 0,
+    starRating = "",
+    moves = 0,
+    interval,
+    second = 1, 
+    minute = 0;
+    
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
