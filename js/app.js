@@ -15,7 +15,7 @@ const cards = ["fa-diamond", "fa-diamond",
 let shuffledCards = [...shuffle(cards)],
     openCards = [],
     matchedCards = 0,
-    starRating = "",
+    starRating = "Gold",
     moves = 0,
     interval,
     second = 1, 
@@ -132,19 +132,20 @@ function clickCard() {
         $(".card").addClass("disable");
       }
     }
+
     // Star rating
-    starRating = "Gold";
-    if (moves == 16) {
-      document.getElementsByClassName("fa-star")[2].remove();
-      starRating = "Silver";
-    } else if (moves == 24) {
-      document.getElementsByClassName("fa-star")[1].remove();
-      starRating = "Bronze";
+    if (moves >= 16 && moves < 24) {
+    	starRating = "Silver";
+    	document.getElementsByClassName("fa-star")[2].remove();
+    } else if (moves >= 24) {
+    	starRating = "Bronze";
+    	document.getElementsByClassName("fa-star")[1].remove();
     }
   })
 };
 // Call function
 clickCard();
+
 
 
 //Modal code from https://www.w3schools.com/howto/howto_css_modals.asp
@@ -176,13 +177,13 @@ let endTime = timer.innerHTML;
     modal.style.display = "block"; 
 
     // Display in the modal the total amount of moves
-    document.querySelector(".totalMoves").innerHTML = moves;
+    document.getElementsByClassName("totalMoves")[0].innerHTML = moves;
 
     // Display in the modal the total time taken
-    document.querySelector(".totalTime").innerHTML = endTime;
+    document.getElementsByClassName("totalTime")[0].innerHTML = endTime;
 
     // Display in the modal the end star rating gold/silver/bronze
-    document.querySelector(".starRating").innerHTML = starRating;
+    document.getElementsByClassName("starRating")[0].innerHTML = starRating;
 
     // Replay button in the modal footer
     $(".btn").click(function() {
