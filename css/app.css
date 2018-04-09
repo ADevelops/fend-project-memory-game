@@ -31,7 +31,13 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    padding-top: 15px;
 }
+
+.title {
+    padding: 35px 0 5px;
+}
+
 
 /*
  * Styles for the deck of cards
