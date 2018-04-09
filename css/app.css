@@ -89,9 +89,11 @@ h1 {
     display: inline-block;
 }
 
+
 .moves {
     margin: 0 -20px 0 25px;
 }
+
 
 .timer {
     width: 200px;
@@ -167,7 +169,7 @@ i.fa-repeat{
 
 
 /*
- *Styles for the modal
+ * Styles for the modal
  */
 
 .modal {
@@ -178,7 +180,7 @@ i.fa-repeat{
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    padding: 0 150px;
+    padding: 0 10%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.10); /* Black w/ opacity */
@@ -236,8 +238,13 @@ i.fa-repeat{
     cursor: pointer;
 }
 
-/* Modal Animation */
+
+/*
+ * Modal animation
+ */
+
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    from {top: -300px; opacity: 0
+    }
+    to {top: 0; opacity: 1
 }
