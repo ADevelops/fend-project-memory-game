@@ -46,16 +46,42 @@ h1 {
  */
 
 .score-panel {
-    text-align: left;
-    width: 345px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
     margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 1.2em;
+}
+
+.score-panel .rating-title  {
+     margin-right: -20px;
+}
+
+.stars {
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .score-panel .stars {
     margin: 0;
     padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
+}
+
+.star-gold {
+    color: gold;
+}
+
+.star-silver {
+    color: silver;
+}
+
+.star-bronze {
+    color: #cd7f32;
 }
 
 .score-panel .stars li {
@@ -63,8 +89,20 @@ h1 {
     display: inline-block;
 }
 
-.score-panel .restart {
-    float: right;
+.moves {
+    margin: 0 -20px 0 25px;
+}
+
+.timer {
+    width: 200px;
+    text-align: center;
+    
+}
+
+i.fa-repeat{
+    text-align: center;
+    width: 42px;
+    height: 24px;
     cursor: pointer;
 }
 
