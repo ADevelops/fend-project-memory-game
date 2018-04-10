@@ -10,18 +10,16 @@ html {
 
 html,
 body {
-
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: #ffffff url('../img/clouds.jpg'); /* Background pattern from Subtle Patterns */
+    background: #65a4f2 url('../img/clouds.png'); /* Background pattern from Subtle Patterns */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Coda', cursive;
-
 }
 
 .container {
@@ -230,6 +228,18 @@ i.fa-repeat{
     cursor: pointer;
 }
 
+/*
+ * Margin media query
+ */
+
+@media screen and (min-width: 960px) {
+    html,
+    body {
+        width: 960px;
+        margin: 0 auto;
+    }
+};
+
 
 /*
  * Modal animation
@@ -240,3 +250,5 @@ i.fa-repeat{
     }
     to {top: 0; opacity: 1
 }
+
+
