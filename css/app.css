@@ -135,7 +135,6 @@ i.fa-repeat{
 }
 
 .deck .card.open {
-    transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
 }
@@ -151,6 +150,7 @@ i.fa-repeat{
 
 .deck .card.match {
     cursor: default;
+    pointer-events: none;
     background: #12fd73;
     font-size: 33px;
     box-shadow: 12px 12px 12px 0 rgba(46, 61, 73, 0.5);

@@ -43,7 +43,7 @@ function shuffle(array) {
 // Create HTMl list items
 function newGame() {
   shuffledCards.forEach(function(card) {
-    $(".deck").append('<li class="card"><i class=" fa ' + card + '"></i></li>');
+    $(".deck").append('<li class="card"><i class="fa ' + card + '"></i></li>');
   })
 }
 // Call newGame function
@@ -99,12 +99,10 @@ function clickCard() {
         }, 600);
 
       // Compare two open cards
-      if(openCards[0].children().attr('class') === openCards[1].children().attr('class')) {
+      if(openCards[0].children().attr("class") === openCards[1].children().attr("class")) {
         // If cards match
-        openCards[0].addClass('match');
-        openCards[1].addClass('match');
-        openCards[0].addClass('disable');
-        openCards[1].addClass('disable');
+        openCards[0].addClass("match");
+        openCards[1].addClass("match");
 
         // Store matched cards count
         matchedCards += 1;
@@ -115,8 +113,8 @@ function clickCard() {
       } else {
         // If cards don't match
         setTimeout(function() {
-          openCards[0].addClass('noMatch');
-          openCards[1].addClass('noMatch');
+          openCards[0].addClass("noMatch");
+          openCards[1].addClass("noMatch");
         }, 500);
 
         // Reset non matching cards
@@ -148,11 +146,15 @@ function clickCard() {
 // Call function
 clickCard();
 
-
+if ($(".match") == true) {
+	$(".match").click(function() {
+		return false;
+	});
+}
 
 //Modal code from https://www.w3schools.com/howto/howto_css_modals.asp
 // Get the modal
-let modal = document.getElementsByClassName('modal')[0];
+let modal = document.getElementsByClassName("modal")[0];
 
 // Get the element that closes the modal
 let close = document.getElementsByClassName("close")[0];
