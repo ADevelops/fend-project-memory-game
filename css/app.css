@@ -11,15 +11,17 @@ html {
 html,
 body {
     margin: 0;
-    padding: 30px 0;
+    padding: 15px 0;
+    width: 100%;
+    max-height: 1920px;
 }
 
 body {
-    background: #65a4f2 url('../img/clouds.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+    background-image: url('../img/clouds.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Coda', cursive;
 }
 
 .container {
@@ -30,7 +32,7 @@ body {
 }
 
 .title {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 3em;
@@ -42,18 +44,18 @@ body {
  */
 
 .score-panel {
+    width: 650px;
     display: flex;
     flex-wrap: nowrap;
-    width: 650px;
     justify-content: space-between;
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 1.28em;
-    padding-bottom: 15px;
+    font-size: 1.1em;
+    padding-bottom: 10px;
 }
 
 .score-panel .rating-title  {
-     margin-right: -10px;
+     margin-right: -10px; 
 }
 
 .stars {
@@ -89,7 +91,7 @@ body {
 .timer {
     width: 200px;
     text-align: center;
-    
+
 }
 
 i.fa-repeat{
@@ -226,19 +228,6 @@ i.fa-repeat{
     text-decoration: none;
     cursor: pointer;
 }
-
-
-/*
- * Margin media query
- */
-
-@media screen and (min-width: 960px) {
-    html,
-    body {
-        width: 960px;
-        margin: 0 auto;
-    }
-};
 
 
 /*

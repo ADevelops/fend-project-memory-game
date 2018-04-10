@@ -103,6 +103,8 @@ function clickCard() {
         // If cards match
         openCards[0].addClass('match');
         openCards[1].addClass('match');
+        openCards[0].addClass('disable');
+        openCards[1].addClass('disable');
 
         // Store matched cards count
         matchedCards += 1;
