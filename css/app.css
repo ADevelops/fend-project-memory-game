@@ -11,7 +11,7 @@ html {
 html,
 body {
     margin: 0;
-    padding: 0;
+    padding: 30px 0;
 }
 
 body {
@@ -29,13 +29,11 @@ body {
     flex-direction: column;
 }
 
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-}
-
 .title {
-    padding: 25px 0 0;
+    padding-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 3em;
 }
 
 
@@ -49,8 +47,9 @@ h1 {
     width: 650px;
     justify-content: space-between;
     margin-bottom: 10px;
-    padding: 5px 0;
-    font-size: 1.2em;
+    font-weight: 600;
+    font-size: 1.28em;
+    padding-bottom: 15px;
 }
 
 .score-panel .rating-title  {
@@ -228,6 +227,7 @@ i.fa-repeat{
     cursor: pointer;
 }
 
+
 /*
  * Margin media query
  */
@@ -250,5 +250,3 @@ i.fa-repeat{
     }
     to {top: 0; opacity: 1
 }
-
-
