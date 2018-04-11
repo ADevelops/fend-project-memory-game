@@ -2,7 +2,7 @@
 
 This game was built in April 2018, as part of the [Udacity Nanodegree web developer course](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001); using HTML, CSS and JavaScript.
 
-*Please note this is a work in progress and further functionality will be added as I development my programming knowledge and skills.*
+*Please note this is a work in progress and further functionality will be added as I develop my programming knowledge and skills.*
 
 ## Table of Contents
 
@@ -21,22 +21,22 @@ For a detailed look at the requirement and specifications, take a look at the [p
 ### Instructions
 
 - This is a memory matching game
-- The aim is to click on two card to reveal and match there symbol
-- There are 16 cards and 8 pairs in total
+- The aim is to click on two cards to reveal and match their symbols
+- There are 16 cards, 8 pairs in total
 - If the two cards picked do not match they will turn red and turn back over
   * The key is to remember the symbol locations
 - If they do match they will turn green and remain showing
-- The game end when all the pairs have been matched
-- The game is timed so try and match the pairs as quick as you can
-- A pop-up will apear once you have found all the pairs displaying:
+- The game ends when all the pairs have been matched
+- The game is timed so try and match the pairs as quickly as you can
+- A pop-up will appear, once you have found all the pairs, displaying:
   * the amount of moves taken to find the pairs
   * your total time taken to find all the pairs
   * and your star rating
 
 #### Star Ratings
 
-- **Gold** - Match all pairs in within _16 moves_
-- **Silver** - Match all pairs in within _24 moves_
+- **Gold** - Match all pairs within _16 moves_
+- **Silver** - Match all pairs within _24 moves_
 - **Bonze** - Match the pairs in over _24 moves_
 
 
