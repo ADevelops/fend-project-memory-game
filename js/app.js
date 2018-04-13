@@ -154,10 +154,10 @@ if ($(".match") == true) {
 
 //Modal code from https://www.w3schools.com/howto/howto_css_modals.asp
 // Get the modal
-let modal = document.getElementsByClassName("modal")[0];
+let modal = document.querySelector(".modal");
 
 // Get the element that closes the modal
-let close = document.getElementsByClassName("close")[0];
+let close = document.querySelector(".close");
 
 // When the user clicks close element on the modal
 close.onclick = function() {
@@ -181,13 +181,13 @@ let endTime = timer.innerHTML;
     modal.style.display = "block"; 
 
     // Display in the modal the total amount of moves
-    document.getElementsByClassName("totalMoves")[0].innerHTML = moves;
+    document.querySelector(".totalMoves").innerHTML = moves;
 
     // Display in the modal the total time taken
-    document.getElementsByClassName("totalTime")[0].innerHTML = endTime;
+    document.querySelector(".totalTime").innerHTML = endTime;
 
     // Display in the modal the end star rating gold/silver/bronze
-    document.getElementsByClassName("starRating")[0].innerHTML = starRating;
+    document.querySelector(".starRating").innerHTML = starRating;
 
     // Replay button in the modal footer
     $(".btn").click(function() {
